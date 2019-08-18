@@ -1,0 +1,165 @@
+html, body {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1900px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../img/overlay2.png") no-repeat fixed center;
+  background-color: #5EB0E5;
+}
+
+#gameContainer {
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  top: 75px;
+  opacity: 0;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.30);
+  margin: auto;
+  background: linear-gradient(-90deg, #8360c3, #2ebf91);
+  background-size: 400% 400%;
+  animation: Gradient 30s ease infinite;
+}
+ 
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#gameContainer #gameCanvas {
+  margin: 0;
+  display: block;
+  border: solid 4px black;
+  width: 700px;
+  height: 700px;
+}
+
+.game-selection {
+  display: inline-block;
+}
+.game-selection select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input, select {
+  transition-property: background-color opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.30);
+  height: 45px;
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  appearance: none;
+}
+input:hover, select:hover {
+  background-color: rgba(0, 0, 0, 0.70);
+}
+input:active, select:active {
+  background-color: black;
+}
+input:focus, select:focus {
+  outline: none;
+}
+
+#message-section {
+  visibility: hidden;
+  color: white;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; 
+  z-index: 1;
+}
+#message-section #message {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+  border: 5px black solid;
+  border-radius: 5px;
+  background-color: #5EB0E5;
+}
+#message-section #message-text {
+  margin-top: 50px;
+}
+#main {
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: center;
+  height: auto;
+  margin: auto;
+}
+#main #menu-section {
+  margin: auto;
+  padding: 10px;
+  height: 65px;
+  box-sizing: border-box;
+}
+#main #menu-section h1 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+#main #view {
+  position: absolute;
+  top: 65px;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  width: 100%;
+  height: auto;
+}
+.border {
+  border: 2px black solid;
+  border-radius: 2px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+  input, select {
+    width: 120px;
+  }
+}
+
+/* Phones, tablets */
+@media only screen and (max-width: 1200px) {
+  input, select {
+    width: 120px;
+  }
+  html, body {
+    width: 100vw;
+    height: 100vh;
+    max-width: 1000px;
+  }
+}

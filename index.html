@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, maximum-scale=5">
+	<meta charset="utf-8">
+	<title>Maze - A Javascript game</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<meta name="Description" content="Javascript maze game">
+	<!--Favicon-->
+  	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  	<!-- Favicon for Safari -->
+  	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+</head>
+<body>
+	<div id="main">
+		<div id="message-section">
+			<div id="message">
+				<div id="message-text">
+					<h1>Awesome!</h1>
+					<p>You completed the maze!</p>
+					<p id="moves"></p>
+					<input id="okBtn" type="button" onclick="toggleVisibility('message-section')" value="Thanks!" />
+				</div>
+			</div>
+		</div>
+		<div id="menu-section">
+			<div class="game-selection">
+				<select id="difficulty-selection">
+					<option value="12">Novice</option>
+					<option value="17">Intermediate</option>
+					<option value="22">Advanced</option>
+					<option value="27">Maze Expert</option>
+				</select>				
+			</div>
+			<input id="mazeStartButton" type="button" onclick="newMaze()" value="Begin" />
+		</div>
+		<div id="view">
+			<div id="gameContainer">
+				<canvas id="gameCanvas" class="border"></canvas>
+			</div>
+		</div>
+	</div>
+
+    <script type="text/javascript" src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
